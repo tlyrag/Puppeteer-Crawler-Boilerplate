@@ -21,7 +21,7 @@ export default {
                 throw new Error('Unable to open website');
             })
         return {
-            status:400,
+            status:200,
             resultMessage:"Browser Successfully opened",
         }
     },
