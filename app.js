@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import browserController from './browserController.js';
 
 const app = express();
 const port =  9999;
@@ -16,3 +17,4 @@ app.use((req,res,next) => {
 })
 
 app.listen(port, () => console.log(`========== Server Started At Port ${port} ==========`))
+browserController.startBrwoser();
