@@ -29,4 +29,22 @@ export default(app) => {
                 })
             })
     })
+
+    app.post('/api/v1/testCafe/populateForm',(req,res) => {
+        TestCafeController.populateForm(req)
+            .then((result)=> {
+                console.log(result),
+                res.json({
+                    ok:true,
+                    result
+                })
+            })
+            .catch((err) => {
+                res.json({
+                    ok:false,
+                    status:500,
+                    resultMessage:err.message
+                })
+            })
+    })    
 }
