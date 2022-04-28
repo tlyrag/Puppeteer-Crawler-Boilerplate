@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import browserController from './Controllers/TestCafeController.js';
+import TestCafeRoutes from './routes/TestCafeRoutes.js';
 
 const app = express();
 const port =  9999;
@@ -16,3 +18,5 @@ app.use((req,res,next) => {
 })
 
 app.listen(port, () => console.log(`========== Server Started At Port ${port} ==========`))
+TestCafeRoutes(app);
+//browserController.startBrwoser();
